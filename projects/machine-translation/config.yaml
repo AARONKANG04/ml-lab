@@ -1,0 +1,13 @@
+# Model and optimization settings. Run controls (steps, checkpoint interval,
+# resume, etc.) are command-line flags on train.py.
+
+n_layers: 4
+embed_size: 1000
+hidden_size: 1000
+src_vocab_size: 32000 # overwritten with the actual tokenizer size at train time
+tgt_vocab_size: 32000
+
+max_len: 60
+batch_size: 256
+lr: 7.0e-4
+grad_clip: 5.0

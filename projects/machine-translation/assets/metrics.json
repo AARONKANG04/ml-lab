@@ -1,0 +1,7 @@
+{
+  "eval_set": "newstest2013 (wmt14 fr-en validation split)",
+  "n": 3000,
+  "checkpoint_step": 85000,
+  "greedy": {"bleu": 12.94, "chrf": 38.84, "ter": 81.72, "rougeL": 38.98},
+  "beam5":  {"bleu": 14.51, "chrf": 39.75, "ter": 77.5,  "rougeL": 41.03}
+}
