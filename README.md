@@ -16,6 +16,7 @@ numbers (including the parts that didn't work).
 | [DDPM](https://arxiv.org/abs/2006.11239) (Ho et al., 2020) | [ddpm/](projects/ddpm) | U-Net noise predictor with a linear schedule, trained on CelebA 64x64 |
 | [DDIM](https://arxiv.org/abs/2010.02502) (Song et al., 2020) | [ddim/](projects/ddim) | Faster non-Markovian sampling on top of DDPM (notes so far, still in progress) |
 | [ALiBi](https://arxiv.org/abs/2108.12409) (Press et al., 2021) | [positional-encodings/](projects/positional-encodings) | Compared learned / RoPE / ALiBi / NoPE on length extrapolation; ALiBi stays flat out to 8k while the others blow up past their 512 training length |
+| [Switch Transformer](https://arxiv.org/abs/2101.03961) (Fedus et al., 2021) | [switch-transformer/](projects/switch-transformer) | Top-1 mixture of experts at matched FLOPs; switch-8 beats the dense baseline by 1.9 ppl and the experts specialize into dates, names, units and modal verbs on their own |
 | [Muon](https://kellerjordan.github.io/posts/muon/) (Jordan, 2024) | [muon/](projects/muon) | Muon optimizer with Newton-Schulz orthogonalization, compared against AdamW on a GPT-2 small (85M) trained on FineWeb-Edu |
 
 ## Setup

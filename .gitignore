@@ -17,6 +17,8 @@ data/
 logs/
 plots/
 models/
+runs/
+metrics/
 
 # OS
 .DS_Store
