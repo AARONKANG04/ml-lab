@@ -15,6 +15,7 @@ numbers (including the parts that didn't work).
 | [Sequence to Sequence Learning](https://arxiv.org/abs/1409.3215) (Sutskever et al., 2014) | [machine-translation/](projects/machine-translation) | LSTM encoder-decoder trained on all 40.8M WMT14 en-fr pairs, 14.5 BLEU with beam search on newstest2013 |
 | [DDPM](https://arxiv.org/abs/2006.11239) (Ho et al., 2020) | [ddpm/](projects/ddpm) | U-Net noise predictor with a linear schedule, trained on CelebA 64x64 |
 | [DDIM](https://arxiv.org/abs/2010.02502) (Song et al., 2020) | [ddim/](projects/ddim) | Faster non-Markovian sampling on top of DDPM (notes so far, still in progress) |
+| [ALiBi](https://arxiv.org/abs/2108.12409) (Press et al., 2021) | [positional-encodings/](projects/positional-encodings) | Compared learned / RoPE / ALiBi / NoPE on length extrapolation; ALiBi stays flat out to 8k while the others blow up past their 512 training length |
 | [Muon](https://kellerjordan.github.io/posts/muon/) (Jordan, 2024) | [muon/](projects/muon) | Muon optimizer with Newton-Schulz orthogonalization, compared against AdamW on a GPT-2 small (85M) trained on FineWeb-Edu |
 
 ## Setup

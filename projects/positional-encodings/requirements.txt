@@ -1,0 +1,6 @@
+torch
+einops
+numpy
+tiktoken
+datasets
+matplotlib
