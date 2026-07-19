@@ -4,12 +4,19 @@ __pycache__/
 *.egg-info/
 .ipynb_checkpoints/
 
+# Environments
+venv/
+
 # Secrets
 .env
 
-# Training outputs
+# Training outputs and data
 artifacts/
 wandb/
+data/
+logs/
+plots/
+models/
 
 # OS
 .DS_Store

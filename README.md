@@ -3,24 +3,38 @@
 A place where I reimplement machine learning papers from scratch to understand
 them properly. Reading a paper and being able to build the thing turn out to be
 different skills, and this repo is me closing that gap one paper at a time. The
-rule I set for myself is to write the core of each model by hand first, not just
-call a library, then train it on real data and report honest numbers (including
-the parts that didn't work).
+rule I set for myself is to write the core of each model or optimizer by hand
+first, not just call a library, then run it on real data and report honest
+numbers (including the parts that didn't work).
 
 ## Projects
 
-### [Machine translation](projects/machine-translation)
+| Paper | Code | What I did |
+|---|---|---|
+| [Adam](https://arxiv.org/abs/1412.6980) (Kingma & Ba, 2014) | [adam/](projects/adam) | Adam written from scratch, benchmarked against SGD with momentum on CIFAR-10 with a ResNet-18 |
+| [Sequence to Sequence Learning](https://arxiv.org/abs/1409.3215) (Sutskever et al., 2014) | [machine-translation/](projects/machine-translation) | LSTM encoder-decoder trained on all 40.8M WMT14 en-fr pairs, 14.5 BLEU with beam search on newstest2013 |
+| [DDPM](https://arxiv.org/abs/2006.11239) (Ho et al., 2020) | [ddpm/](projects/ddpm) | U-Net noise predictor with a linear schedule, trained on CelebA 64x64 |
+| [DDIM](https://arxiv.org/abs/2010.02502) (Song et al., 2020) | [ddim/](projects/ddim) | Faster non-Markovian sampling on top of DDPM (notes so far, still in progress) |
+| [Muon](https://kellerjordan.github.io/posts/muon/) (Jordan, 2024) | [muon/](projects/muon) | Muon optimizer with Newton-Schulz orthogonalization, compared against AdamW on a GPT-2 small (85M) trained on FineWeb-Edu |
 
-Sutskever, Vinyals & Le (2014), the LSTM encoder-decoder that showed a plain
-neural network could translate without any alignment model. I wrote the LSTM cell
-and the encoder/decoder loop by hand, then swapped in cuDNN's `nn.LSTM` to train
-at speed on all 40.8M WMT14 English-French pairs. It reaches 14.5 BLEU with beam
-search on newstest2013. The project README has the training curves, the full
-metrics (BLEU, chrF, TER, ROUGE), and 3,000 example translations with a look at
-where it fails.
+## Setup
 
-## How it's set up
+Each project is self-contained under `projects/<name>` with its own README and,
+once there's code to run, a `requirements.txt`. Pick one and install what it
+needs:
 
-Each project is self-contained under `projects/<name>` with its own README,
-`requirements.txt`, `config.yaml`, and `src/`. Training runs log to Weights &
-Biases and checkpoint to disk so they can be resumed.
+```bash
+cd projects/machine-translation
+pip install -r requirements.txt
+```
+
+If you're on a Blackwell GPU (RTX 5090 and similar), stable PyTorch may not
+support it yet, so install the nightly build:
+
+```bash
+pip install --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu128
+```
+
+## License
+
+MIT, see [LICENSE](LICENSE).
