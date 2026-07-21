@@ -18,6 +18,7 @@ numbers (including the parts that didn't work).
 | [ALiBi](https://arxiv.org/abs/2108.12409) (Press et al., 2021) | [positional-encodings/](projects/positional-encodings) | Compared learned / RoPE / ALiBi / NoPE on length extrapolation; ALiBi stays flat out to 8k while the others blow up past their 512 training length |
 | [Switch Transformer](https://arxiv.org/abs/2101.03961) (Fedus et al., 2021) | [switch-transformer/](projects/switch-transformer) | Top-1 mixture of experts at matched FLOPs; switch-8 beats the dense baseline by 1.9 ppl and the experts specialize into dates, names, units and modal verbs on their own |
 | [Muon](https://kellerjordan.github.io/posts/muon/) (Jordan, 2024) | [muon/](projects/muon) | Muon optimizer with Newton-Schulz orthogonalization, compared against AdamW on a GPT-2 small (85M) trained on FineWeb-Edu |
+| [SDFT](https://arxiv.org/abs/2601.19897) (Shenfeld et al., 2026) | [self-distillation/](projects/self-distillation) | On-policy self-distillation for injecting post-cutoff facts into Qwen2.5-3B; the knowledge result did not reproduce at 3B (SFT learned ~2x more), the retention claim did directionally, and the audit that established both is the interesting part |
 
 ## Setup
 

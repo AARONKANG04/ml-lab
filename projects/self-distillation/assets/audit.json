@@ -1,0 +1,40 @@
+{
+  "sdft_lr1e4": {
+    "label": "SDFT lr1e-4",
+    "knowledge": {
+      "paraphrase": 0.18666666666666668,
+      "trained_wording": 0.18666666666666668,
+      "ood": 0.018518518518518517
+    },
+    "forgetting": {
+      "mmlu": 0.6105263157894737,
+      "hellaswag": 0.588,
+      "winogrande": 0.71,
+      "truthfulqa_mc2": 0.3736962567999659,
+      "arc_challenge": 0.438,
+      "average": 0.5440445145178879
+    }
+  },
+  "cap_audit": {
+    "acc96": 0.15,
+    "acc256": 0.15
+  },
+  "lr_probe_old_data": {
+    "lr5e-05_ep4": 0.0,
+    "lr5e-05_ep8": 0.0,
+    "lr1e-04_ep4": 0.0,
+    "lr1e-04_ep8": 0.0
+  },
+  "para_probe": {
+    "base": 0.1,
+    "sft_lr1e-05": {
+      "heldout_paraphrase": 0.13333333333333333,
+      "trained_wording": 0.11666666666666667
+    },
+    "sft_lr5e-05": {
+      "heldout_paraphrase": 0.35,
+      "trained_wording": 0.45
+    }
+  }
+}
+

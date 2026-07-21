@@ -1,0 +1,1005 @@
+{
+  "base": {
+    "label": "base",
+    "knowledge": {
+      "paraphrase": 0.04666666666666667,
+      "trained_wording": 0.02,
+      "ood": 0.0
+    },
+    "forgetting": {
+      "mmlu": 0.668859649122807,
+      "hellaswag": 0.646,
+      "winogrande": 0.708,
+      "truthfulqa_mc2": 0.5766675749062988,
+      "arc_challenge": 0.458,
+      "average": 0.6115054448058211
+    },
+    "samples": [
+      {
+        "q": "What was the total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods?",
+        "gold": "238",
+        "pred": "The report by NDMA states that 12, 345 houses were damaged in Punjab province due to the 2025 floods.",
+        "ok": false
+      },
+      {
+        "q": "During Hurricane Erin in 2025, the US Coast Guard closed how many seaports in Puerto Rico?",
+        "gold": "Six",
+        "pred": "The US Coast Guard closed 14 seaports in Puerto Rico during Hurricane Erin in 2025.",
+        "ok": false
+      },
+      {
+        "q": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at what distance and direction from the 2025 epicenter?",
+        "gold": "45 km southeast",
+        "pred": "The 1952 earthquake's epicenter was approximately 7,000 km to the east of the 2025 Kamchatka event's epicenter.",
+        "ok": false
+      },
+      {
+        "q": "How did Commissioner Baldwin describe the idea of flood sirens in Kerr County during the 2016 discussion mentioned in the 2025 flood coverage?",
+        "gold": "Extravagant",
+        "pred": "Commissioner Baldwin described flood sirens as a crucial tool for early warning during severe weather events.",
+        "ok": false
+      },
+      {
+        "q": "At 00:00 UTC on which day in 2025 did the JMA declare Fung-wong a tropical storm?",
+        "gold": "00:00 UTC on November 12",
+        "pred": "The JMA declared Fung-wong a tropical storm at 00:00 UTC on September 14, 2025.",
+        "ok": false
+      },
+      {
+        "q": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for what county?",
+        "gold": "Bandera County",
+        "pred": "Baylor County",
+        "ok": false
+      },
+      {
+        "q": "The federal government update on October 30, 2025 stated that how many people were evacuated from 73 First Nations communities?",
+        "gold": "45,000",
+        "pred": "12,000 people were evacuated from 73 First Nations communities",
+        "ok": false
+      },
+      {
+        "q": "How large did the fire in the Pine Pond area near Musgrave Harbour grow to by July 25, 2025?",
+        "gold": "over 1,500 ha",
+        "pred": "The fire in the Pine Pond area near Musgrave Harbour had grown to an area of approximately 1, 600 hectares by July 25, 2025.",
+        "ok": true
+      },
+      {
+        "q": "Over the course of July 3 and 4, 2025, the NWS issued how many increasingly severe alerts for the area in and around Kerr County, as reported by CBS News?",
+        "gold": "22",
+        "pred": "Two increasingly severe alerts were issued for the area in and around Kerr County, as reported by CBS News.",
+        "ok": false
+      },
+      {
+        "q": "What was the official death toll in the Naypyidaw Union Territory from the 2025 earthquake?",
+        "gold": "665",
+        "pred": "The official death toll in the Naypyidaw Union Territory from the 2025 earthquake was 124.",
+        "ok": false
+      },
+      {
+        "q": "How many individuals were impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps?",
+        "gold": "5.8 million",
+        "pred": "The International Medical Corps reported that over 3 million individuals were impacted by the 2025 floods in Pakistan.",
+        "ok": false
+      },
+      {
+        "q": "The 2025 Canadian wildfires prompted research funding. What was the total amount announced in August and the number of projects funded?",
+        "gold": "$46 million for 30 projects",
+        "pred": "$10 million was announced in August for 15 projects.",
+        "ok": false
+      },
+      {
+        "q": "The tsunami from the 2025 Kamchatka earthquake caused how much monetary damage in Crescent City, California?",
+        "gold": "$1 million",
+        "pred": "$10 million in damages reported in Crescent City, California following the 2025 Kamchatka earthquake tsunami.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what nationality were the two people killed by falling debris in Mandalay?",
+        "gold": "French",
+        "pred": "Australian tourists were among the two people killed by falling debris in Mandalay during the 2025 Myanmar earthquake.",
+        "ok": false
+      },
+      {
+        "q": "What were the numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake?",
+        "gold": "646 rescuers and 14 search dogs",
+        "pred": "170 rescuers and 24 search dogs were sent from Yunnan province to help after the earthquake.",
+        "ok": false
+      },
+      {
+        "q": "What was the value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba?",
+        "gold": "$74 million",
+        "pred": "The value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba was not provided as it was an hypothetical scenario and actual figures would depend on the specific appeal details.",
+        "ok": false
+      },
+      {
+        "q": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by what distance due to the 2025 earthquake?",
+        "gold": "2 m",
+        "pred": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by up to 5 meters due to the 2025 earthquake.",
+        "ok": false
+      },
+      {
+        "q": "How many fatalities occurred when a rescue helicopter went down due to bad weather in the 2025 Pakistan floods, and what was the date of that crash?",
+        "gold": "15 August 2025, 5 killed",
+        "pred": "11 fatalities occurred when a rescue helicopter crashed due to bad weather on August 26, 2025, during the Pakistan floods.",
+        "ok": false
+      },
+      {
+        "q": "According to the NDRRMC in 2025, what was the number of people affected by Typhoon Fung-wong in the Philippines?",
+        "gold": "7.5 million",
+        "pred": "The NDRRMC reported that Typhoon Fung-wong affected over 1. 6 million people in the Philippines in 2025.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what value of vertical PGA did the GFZ station in Naypyidaw measure?",
+        "gold": "1.0656 g",
+        "pred": "The GFZ station in Naypyidaw measured a vertical PGA of 149 gs for the 2025 Myanmar earthquake.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Canadian wildfires, what morning date did the hamlet of Fort Providence get an evacuation order?",
+        "gold": "August 31",
+        "pred": "The hamlet of Fort Providence received an evacuation order on August 14, 2025.",
+        "ok": false
+      },
+      {
+        "q": "In 2025, Typhoon Fung-wong left how many people dead in the Philippines?",
+        "gold": "33",
+        "pred": "Typhoon Fung-wong killed 49 people in the Philippines in 2025.",
+        "ok": false
+      },
+      {
+        "q": "How did the head of the junta characterize the damage in the capital following the 2025 earthquake?",
+        "gold": "Massive",
+        "pred": "The junta head characterized the damage in the capital as severe and called for international aid.",
+        "ok": true
+      },
+      {
+        "q": "At which school was the 131 mph wind gust measured during the hurricane?",
+        "gold": "131 mph at New Hope primary school",
+        "pred": "University of Miami Hurricane Stadium",
+        "ok": false
+      },
+      {
+        "q": "What was the exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong?",
+        "gold": "19:30 UTC",
+        "pred": "1800UTC_on_24_July_2017",
+        "ok": false
+      },
+      {
+        "q": "Which Bahamian island did Melissa strike at 22:15 UTC on October 29, 2025?",
+        "gold": "22:15 UTC on October 29, Long Island, Bahamas",
+        "pred": "Grand Bahama Island",
+        "ok": false
+      },
+      {
+        "q": "In the July 2025 Central Texas floods, the river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching what peak height?",
+        "gold": "37.52 ft (11.44 m)",
+        "pred": "The river gauge at Hunt reached a peak height of 28. 6 feet before stopping updates at 5:10 am on July 4, 2025.",
+        "ok": false
+      },
+      {
+        "q": "On May 31, 2025, a relief team arrived in Winnipeg from which charitable organization as part of the 2025 Canadian wildfire response?",
+        "gold": "World Central Kitchen",
+        "pred": "The Salvation Army",
+        "ok": false
+      },
+      {
+        "q": "To what faraway continent did smoke from the 2025 Canadian wildfires travel, causing hazy conditions?",
+        "gold": "Europe",
+        "pred": "Asia",
+        "ok": false
+      },
+      {
+        "q": "By late July 2025, what proportion of the country was experiencing abnormally dry conditions according to the article?",
+        "gold": "71%",
+        "pred": "The article did not specify a particular proportion for late July 2025 regarding abnormally dry conditions across the country.",
+        "ok": false
+      }
+    ]
+  },
+  "sft": {
+    "label": "SFT",
+    "knowledge": {
+      "paraphrase": 0.31666666666666665,
+      "trained_wording": 0.5066666666666667,
+      "ood": 0.05555555555555555
+    },
+    "forgetting": {
+      "mmlu": 0.6684210526315789,
+      "hellaswag": 0.638,
+      "winogrande": 0.676,
+      "truthfulqa_mc2": 0.4400384475363879,
+      "arc_challenge": 0.528,
+      "average": 0.5900919000335934
+    },
+    "samples": [
+      {
+        "q": "What was the total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods?",
+        "gold": "238",
+        "pred": "135,947",
+        "ok": false
+      },
+      {
+        "q": "During Hurricane Erin in 2025, the US Coast Guard closed how many seaports in Puerto Rico?",
+        "gold": "Six",
+        "pred": "11",
+        "ok": false
+      },
+      {
+        "q": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at what distance and direction from the 2025 epicenter?",
+        "gold": "45 km southeast",
+        "pred": "300 km east and 400 m lower",
+        "ok": false
+      },
+      {
+        "q": "How did Commissioner Baldwin describe the idea of flood sirens in Kerr County during the 2016 discussion mentioned in the 2025 flood coverage?",
+        "gold": "Extravagant",
+        "pred": "Overkill",
+        "ok": true
+      },
+      {
+        "q": "At 00:00 UTC on which day in 2025 did the JMA declare Fung-wong a tropical storm?",
+        "gold": "00:00 UTC on November 12",
+        "pred": "November 10",
+        "ok": false
+      },
+      {
+        "q": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for what county?",
+        "gold": "Bandera County",
+        "pred": "Bandera County",
+        "ok": true
+      },
+      {
+        "q": "The federal government update on October 30, 2025 stated that how many people were evacuated from 73 First Nations communities?",
+        "gold": "45,000",
+        "pred": "4,800",
+        "ok": false
+      },
+      {
+        "q": "How large did the fire in the Pine Pond area near Musgrave Harbour grow to by July 25, 2025?",
+        "gold": "over 1,500 ha",
+        "pred": "over 1,400 ha",
+        "ok": false
+      },
+      {
+        "q": "Over the course of July 3 and 4, 2025, the NWS issued how many increasingly severe alerts for the area in and around Kerr County, as reported by CBS News?",
+        "gold": "22",
+        "pred": "seven",
+        "ok": false
+      },
+      {
+        "q": "What was the official death toll in the Naypyidaw Union Territory from the 2025 earthquake?",
+        "gold": "665",
+        "pred": "1,347",
+        "ok": false
+      },
+      {
+        "q": "How many individuals were impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps?",
+        "gold": "5.8 million",
+        "pred": "1.4 million",
+        "ok": false
+      },
+      {
+        "q": "The 2025 Canadian wildfires prompted research funding. What was the total amount announced in August and the number of projects funded?",
+        "gold": "$46 million for 30 projects",
+        "pred": "$64 million for 18 projects",
+        "ok": false
+      },
+      {
+        "q": "The tsunami from the 2025 Kamchatka earthquake caused how much monetary damage in Crescent City, California?",
+        "gold": "$1 million",
+        "pred": "$1 million",
+        "ok": true
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what nationality were the two people killed by falling debris in Mandalay?",
+        "gold": "French",
+        "pred": "French",
+        "ok": true
+      },
+      {
+        "q": "What were the numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake?",
+        "gold": "646 rescuers and 14 search dogs",
+        "pred": "1,000 rescuers and 14 search dogs",
+        "ok": false
+      },
+      {
+        "q": "What was the value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba?",
+        "gold": "$74 million",
+        "pred": "$75 million",
+        "ok": false
+      },
+      {
+        "q": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by what distance due to the 2025 earthquake?",
+        "gold": "2 m",
+        "pred": "1 m",
+        "ok": false
+      },
+      {
+        "q": "How many fatalities occurred when a rescue helicopter went down due to bad weather in the 2025 Pakistan floods, and what was the date of that crash?",
+        "gold": "15 August 2025, 5 killed",
+        "pred": "14 killed on 8 August 2025",
+        "ok": false
+      },
+      {
+        "q": "According to the NDRRMC in 2025, what was the number of people affected by Typhoon Fung-wong in the Philippines?",
+        "gold": "7.5 million",
+        "pred": "738,000",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what value of vertical PGA did the GFZ station in Naypyidaw measure?",
+        "gold": "1.0656 g",
+        "pred": "1.4 g",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Canadian wildfires, what morning date did the hamlet of Fort Providence get an evacuation order?",
+        "gold": "August 31",
+        "pred": "August 31",
+        "ok": true
+      },
+      {
+        "q": "In 2025, Typhoon Fung-wong left how many people dead in the Philippines?",
+        "gold": "33",
+        "pred": "13",
+        "ok": false
+      },
+      {
+        "q": "How did the head of the junta characterize the damage in the capital following the 2025 earthquake?",
+        "gold": "Massive",
+        "pred": "Massive",
+        "ok": true
+      },
+      {
+        "q": "At which school was the 131 mph wind gust measured during the hurricane?",
+        "gold": "131 mph at New Hope primary school",
+        "pred": "Louisiana Tech University",
+        "ok": false
+      },
+      {
+        "q": "What was the exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong?",
+        "gold": "19:30 UTC",
+        "pred": "03:00 UTC on November 12",
+        "ok": false
+      },
+      {
+        "q": "Which Bahamian island did Melissa strike at 22:15 UTC on October 29, 2025?",
+        "gold": "22:15 UTC on October 29, Long Island, Bahamas",
+        "pred": "New Providence",
+        "ok": false
+      },
+      {
+        "q": "In the July 2025 Central Texas floods, the river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching what peak height?",
+        "gold": "37.52 ft (11.44 m)",
+        "pred": "37.52 ft (11.44 m)",
+        "ok": true
+      },
+      {
+        "q": "On May 31, 2025, a relief team arrived in Winnipeg from which charitable organization as part of the 2025 Canadian wildfire response?",
+        "gold": "World Central Kitchen",
+        "pred": "World Central Kitchen",
+        "ok": true
+      },
+      {
+        "q": "To what faraway continent did smoke from the 2025 Canadian wildfires travel, causing hazy conditions?",
+        "gold": "Europe",
+        "pred": "Europe",
+        "ok": true
+      },
+      {
+        "q": "By late July 2025, what proportion of the country was experiencing abnormally dry conditions according to the article?",
+        "gold": "71%",
+        "pred": "71%",
+        "ok": true
+      }
+    ]
+  },
+  "sdft": {
+    "label": "SDFT",
+    "knowledge": {
+      "paraphrase": 0.18666666666666668,
+      "trained_wording": 0.26,
+      "ood": 0.0
+    },
+    "forgetting": {
+      "mmlu": 0.6600877192982456,
+      "hellaswag": 0.642,
+      "winogrande": 0.694,
+      "truthfulqa_mc2": 0.47540327029672563,
+      "arc_challenge": 0.508,
+      "average": 0.5958981979189942
+    },
+    "samples": [
+      {
+        "q": "What was the total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods?",
+        "gold": "238",
+        "pred": "The total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods is 1,437. This information comes from the passage stating that \"NDMA reported that 1,437 houses were damaged in Punjab.\"",
+        "ok": false
+      },
+      {
+        "q": "During Hurricane Erin in 2025, the US Coast Guard closed how many seaports in Puerto Rico?",
+        "gold": "Six",
+        "pred": "The US Coast Guard closed 13 seaports in Puerto Rico during Hurricane Erin in 2025. This information is derived from the passage stating \"The US Coast Guard closed 13 seaports in Puerto Rico.\"",
+        "ok": false
+      },
+      {
+        "q": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at what distance and direction from the 2025 epicenter?",
+        "gold": "45 km southeast",
+        "pred": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at a distance of 1,000 km (620 mi) to the northeast of the 2025 epicenter.",
+        "ok": false
+      },
+      {
+        "q": "How did Commissioner Baldwin describe the idea of flood sirens in Kerr County during the 2016 discussion mentioned in the 2025 flood coverage?",
+        "gold": "Extravagant",
+        "pred": "Commissioner Baldwin described the idea of flood sirens in Kerr County as \"a little bit of a joke\" or \"a little bit of a joke and a little bit of a laugh.\" This is derived from the statement: \"Commissioner Baldwin said, 'I don't think it's a good idea. I think it's a little bit of a joke. I think it's a little bit of a laugh. But if you're going to do it, do it right",
+        "ok": false
+      },
+      {
+        "q": "At 00:00 UTC on which day in 2025 did the JMA declare Fung-wong a tropical storm?",
+        "gold": "00:00 UTC on November 12",
+        "pred": "The JMA declared Fung-wong a tropical storm at 00:00 UTC on November 10, 2025.",
+        "ok": false
+      },
+      {
+        "q": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for what county?",
+        "gold": "Bandera County",
+        "pred": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for Bandera County.",
+        "ok": true
+      },
+      {
+        "q": "The federal government update on October 30, 2025 stated that how many people were evacuated from 73 First Nations communities?",
+        "gold": "45,000",
+        "pred": "The federal government update on October 30, 2025 stated that 73 First Nations communities had 1,468 evacuees. This information is derived from the passage which states \"The federal government update on October 30, 2025 stated that 73 First Nations communities had 1,468 evacuees.\"",
+        "ok": false
+      },
+      {
+        "q": "How large did the fire in the Pine Pond area near Musgrave Harbour grow to by July 25, 2025?",
+        "gold": "over 1,500 ha",
+        "pred": "The fire in the Pine Pond area near Musgrave Harbour grew to over 1,000 hectares (2,471 acres) by July 25, 2025. This information is derived from the passage which states that \"By July 25, the fire had grown to 1,000 ha (2,471 acres).\"",
+        "ok": false
+      },
+      {
+        "q": "Over the course of July 3 and 4, 2025, the NWS issued how many increasingly severe alerts for the area in and around Kerr County, as reported by CBS News?",
+        "gold": "22",
+        "pred": "The source passage clearly states that \"Over the course of July 3 and 4, 2025, the NWS issued 17 increasingly severe flash flood warnings and 16 flash flood emergency warnings for the area in and around Kerr County.\" Therefore, the correct number is 33, not 17 or 16.",
+        "ok": false
+      },
+      {
+        "q": "What was the official death toll in the Naypyidaw Union Territory from the 2025 earthquake?",
+        "gold": "665",
+        "pred": "The official death toll in the Naypyidaw Union Territory from the 2025 earthquake was 1,347. This information is derived from the source passage which states: \"In the Naypyidaw Union Territory, 1,347 people were killed and 1,000 others injured.\"",
+        "ok": false
+      },
+      {
+        "q": "How many individuals were impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps?",
+        "gold": "5.8 million",
+        "pred": "The number of individuals impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps, is 1.4 million.",
+        "ok": false
+      },
+      {
+        "q": "The 2025 Canadian wildfires prompted research funding. What was the total amount announced in August and the number of projects funded?",
+        "gold": "$46 million for 30 projects",
+        "pred": "The total amount announced for research funding was $14 million, not $10 million as stated in the source passage. The passage clearly states that \"the government announced $14 million to fund research into the causes and impacts of the fires.\" Therefore, the correct answer is:\n\n$14 million for 14 projects.",
+        "ok": false
+      },
+      {
+        "q": "The tsunami from the 2025 Kamchatka earthquake caused how much monetary damage in Crescent City, California?",
+        "gold": "$1 million",
+        "pred": "The tsunami from the 2025 Kamchatka earthquake caused $1 million in monetary damage in Crescent City, California.",
+        "ok": true
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what nationality were the two people killed by falling debris in Mandalay?",
+        "gold": "French",
+        "pred": "The two people killed by falling debris in Mandalay were French nationals.",
+        "ok": true
+      },
+      {
+        "q": "What were the numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake?",
+        "gold": "646 rescuers and 14 search dogs",
+        "pred": "The numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake were 100 rescuers and 2 search dogs.",
+        "ok": false
+      },
+      {
+        "q": "What was the value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba?",
+        "gold": "$74 million",
+        "pred": "The value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba was US$13 million.",
+        "ok": false
+      },
+      {
+        "q": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by what distance due to the 2025 earthquake?",
+        "gold": "2 m",
+        "pred": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by 10 km (6.2 mi) due to the 2025 earthquake.",
+        "ok": false
+      },
+      {
+        "q": "How many fatalities occurred when a rescue helicopter went down due to bad weather in the 2025 Pakistan floods, and what was the date of that crash?",
+        "gold": "15 August 2025, 5 killed",
+        "pred": "The rescue helicopter crash occurred on 27 July 2025, resulting in 10 fatalities.",
+        "ok": false
+      },
+      {
+        "q": "According to the NDRRMC in 2025, what was the number of people affected by Typhoon Fung-wong in the Philippines?",
+        "gold": "7.5 million",
+        "pred": "The number of people affected by Typhoon Fung-wong in the Philippines as per the National Disaster Risk Reduction and Management Council (NDRRMC) in 2025 is 13.4 million.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what value of vertical PGA did the GFZ station in Naypyidaw measure?",
+        "gold": "1.0656 g",
+        "pred": "The value of vertical PGA measured by the GFZ station in Naypyidaw was 1.74 g. This information is derived from the source passage which states: \"GFZ station in Naypyidaw measured a vertical PGA of 1.74 g.\"",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Canadian wildfires, what morning date did the hamlet of Fort Providence get an evacuation order?",
+        "gold": "August 31",
+        "pred": "The hamlet of Fort Providence got an evacuation order on August 14, not May 14 as stated in the source passage. The correct information is provided in the following excerpt:\n\n\"Firefighters from the Northwest Territories and Nunavut were deployed to assist with the fire response. On July 13, a fire broke out near the hamlet of Fort Providence, and the hamlet was evacuated on July 14. The fire grew rapidly and forced the evacuation",
+        "ok": false
+      },
+      {
+        "q": "In 2025, Typhoon Fung-wong left how many people dead in the Philippines?",
+        "gold": "33",
+        "pred": "The passage states that \"Fung-wong left at least 13 deaths and 14 injuries in the Philippines.\" Therefore, the correct answer is 13.",
+        "ok": false
+      },
+      {
+        "q": "How did the head of the junta characterize the damage in the capital following the 2025 earthquake?",
+        "gold": "Massive",
+        "pred": "The head of the junta characterized the damage in the capital as \"massive\" and \"total destruction\".",
+        "ok": true
+      },
+      {
+        "q": "At which school was the 131 mph wind gust measured during the hurricane?",
+        "gold": "131 mph at New Hope primary school",
+        "pred": "The correct answer is indeed Cabo Rojo High School. The passage clearly states that \"the 131 mph wind gust was measured at Cabo Rojo High School.\"",
+        "ok": false
+      },
+      {
+        "q": "What was the exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong?",
+        "gold": "19:30 UTC",
+        "pred": "The exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong was 00:00 UTC on November 12, 2025.",
+        "ok": false
+      },
+      {
+        "q": "Which Bahamian island did Melissa strike at 22:15 UTC on October 29, 2025?",
+        "gold": "22:15 UTC on October 29, Long Island, Bahamas",
+        "pred": "The Bahamian island that Melissa struck at 22:15 UTC on October 29, 2025 was New Providence Island.",
+        "ok": false
+      },
+      {
+        "q": "In the July 2025 Central Texas floods, the river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching what peak height?",
+        "gold": "37.52 ft (11.44 m)",
+        "pred": "The river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching a peak height of 37.9 feet (11.6 meters).",
+        "ok": false
+      },
+      {
+        "q": "On May 31, 2025, a relief team arrived in Winnipeg from which charitable organization as part of the 2025 Canadian wildfire response?",
+        "gold": "World Central Kitchen",
+        "pred": "The answer is indeed World Central Kitchen (WCF). This can be derived from the passage that states \"On May 31, 2025, a relief team arrived in Winnipeg from World Central Kitchen (WCF) as part of the 2025 Canadian wildfire response.\"",
+        "ok": true
+      },
+      {
+        "q": "To what faraway continent did smoke from the 2025 Canadian wildfires travel, causing hazy conditions?",
+        "gold": "Europe",
+        "pred": "The smoke from the 2025 Canadian wildfires traveled to Europe, causing hazy conditions there.",
+        "ok": true
+      },
+      {
+        "q": "By late July 2025, what proportion of the country was experiencing abnormally dry conditions according to the article?",
+        "gold": "71%",
+        "pred": "The passage states that by late July 2025, \"over 70% of the country was experiencing abnormally dry conditions.\" However, the exact percentage mentioned is 81%, not 60%. Therefore, the correct answer based on the information provided is:\n\nSource passage:\n\"By late July 2025, over 70% of the country was experiencing abnormally dry conditions, and this number had risen to 81% by",
+        "ok": false
+      }
+    ]
+  },
+  "sdft_hi_lr": {
+    "label": "SDFT lr1e-4",
+    "knowledge": {
+      "paraphrase": 0.18666666666666668,
+      "trained_wording": 0.18666666666666668,
+      "ood": 0.018518518518518517
+    },
+    "forgetting": {
+      "mmlu": 0.6105263157894737,
+      "hellaswag": 0.588,
+      "winogrande": 0.71,
+      "truthfulqa_mc2": 0.3736962567999659,
+      "arc_challenge": 0.438,
+      "average": 0.5440445145178879
+    },
+    "samples": [
+      {
+        "q": "What was the total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods?",
+        "gold": "238",
+        "pred": "The total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods is 1,000.",
+        "ok": false
+      },
+      {
+        "q": "During Hurricane Erin in 2025, the US Coast Guard closed how many seaports in Puerto Rico?",
+        "gold": "Six",
+        "pred": "The US Coast Guard closed 13 seaports in Puerto Rico during Hurricane Erin in 2025.",
+        "ok": false
+      },
+      {
+        "q": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at what distance and direction from the 2025 epicenter?",
+        "gold": "45 km southeast",
+        "pred": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at a distance of 130 km (80 mi) from the 2025 epicenter.",
+        "ok": false
+      },
+      {
+        "q": "How did Commissioner Baldwin describe the idea of flood sirens in Kerr County during the 2016 discussion mentioned in the 2025 flood coverage?",
+        "gold": "Extravagant",
+        "pred": "Commissioner Baldwin described the idea of flood sirens as \"a little bit of a joke\" and said that it was \"a little bit of a joke\" to have them in Kerr County. He also stated that the idea of flood sirens was \"a little bit of a joke\" and that it was \"a little bit of a joke\" to have them in Kerr County.",
+        "ok": false
+      },
+      {
+        "q": "At 00:00 UTC on which day in 2025 did the JMA declare Fung-wong a tropical storm?",
+        "gold": "00:00 UTC on November 12",
+        "pred": "The JMA declared Fung-wong a tropical storm at 00:00 UTC on November 10, 2025.",
+        "ok": false
+      },
+      {
+        "q": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for what county?",
+        "gold": "Bandera County",
+        "pred": "The initial flash flood warning of the July 2025 Central Texas flood event was issued for Kerr County, not for any other county.",
+        "ok": false
+      },
+      {
+        "q": "The federal government update on October 30, 2025 stated that how many people were evacuated from 73 First Nations communities?",
+        "gold": "45,000",
+        "pred": "The federal government update on October 30, 2025 stated that 73 First Nations communities were evacuated.",
+        "ok": false
+      },
+      {
+        "q": "How large did the fire in the Pine Pond area near Musgrave Harbour grow to by July 25, 2025?",
+        "gold": "over 1,500 ha",
+        "pred": "The fire in the Pine Pond area near Musgrave Harbour grew to 100 ha (390 acres) on July 14, and then to 200 ha (780 acres) on July 16.",
+        "ok": false
+      },
+      {
+        "q": "Over the course of July 3 and 4, 2025, the NWS issued how many increasingly severe alerts for the area in and around Kerr County, as reported by CBS News?",
+        "gold": "22",
+        "pred": "The National Weather Service (NWS) issued a total of 16 alerts for the area in and around Kerr County, Texas, over the course of July 3 and 4, 2025.",
+        "ok": false
+      },
+      {
+        "q": "What was the official death toll in the Naypyidaw Union Territory from the 2025 earthquake?",
+        "gold": "665",
+        "pred": "The official death toll in the Naypyidaw Union Territory from the 2025 earthquake was 1,000.",
+        "ok": false
+      },
+      {
+        "q": "How many individuals were impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps?",
+        "gold": "5.8 million",
+        "pred": "The number of individuals impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps, was 1,000,000.",
+        "ok": false
+      },
+      {
+        "q": "The 2025 Canadian wildfires prompted research funding. What was the total amount announced in August and the number of projects funded?",
+        "gold": "$46 million for 30 projects",
+        "pred": "The total amount announced in August for wildfire research was $14 million, which is a significant sum considering the severity of the situation. The number of projects funded was 26, but the passage mentions that 13 of these were from the University of Saskatchewan, bringing the total to 18.",
+        "ok": false
+      },
+      {
+        "q": "The tsunami from the 2025 Kamchatka earthquake caused how much monetary damage in Crescent City, California?",
+        "gold": "$1 million",
+        "pred": "The tsunami from the 2025 Kamchatka earthquake caused $10 million in damage to Crescent City, California.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what nationality were the two people killed by falling debris in Mandalay?",
+        "gold": "French",
+        "pred": "The two people killed by falling debris in Mandalay were French nationals.",
+        "ok": true
+      },
+      {
+        "q": "What were the numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake?",
+        "gold": "646 rescuers and 14 search dogs",
+        "pred": "The number of rescuers and search dogs sent from China's Yunnan province to help after the earthquake was 100.",
+        "ok": false
+      },
+      {
+        "q": "What was the value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba?",
+        "gold": "$74 million",
+        "pred": "The UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba was worth $10 million.",
+        "ok": false
+      },
+      {
+        "q": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by what distance due to the 2025 earthquake?",
+        "gold": "2 m",
+        "pred": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by 100 meters (398 feet) due to the 2025 earthquake.",
+        "ok": false
+      },
+      {
+        "q": "How many fatalities occurred when a rescue helicopter went down due to bad weather in the 2025 Pakistan floods, and what was the date of that crash?",
+        "gold": "15 August 2025, 5 killed",
+        "pred": "The answer is 18. The question asks for the number of fatalities and the date of the crash. The passage states that \"A rescue helicopter went down due to bad weather in the 2025 Pakistan floods, killing all five people on board.\"",
+        "ok": false
+      },
+      {
+        "q": "According to the NDRRMC in 2025, what was the number of people affected by Typhoon Fung-wong in the Philippines?",
+        "gold": "7.5 million",
+        "pred": "The number of people affected by Typhoon Fung-wong in the Philippines according to the NDRRMC in 2025 was 13,476,000.",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what value of vertical PGA did the GFZ station in Naypyidaw measure?",
+        "gold": "1.0656 g",
+        "pred": "The GFZ station in Naypyidaw measured a vertical PGA of 1.37 g (1.37 m/s\u00b2).",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Canadian wildfires, what morning date did the hamlet of Fort Providence get an evacuation order?",
+        "gold": "August 31",
+        "pred": "The hamlet of Fort Providence got an evacuation order on July 14, 2025.",
+        "ok": false
+      },
+      {
+        "q": "In 2025, Typhoon Fung-wong left how many people dead in the Philippines?",
+        "gold": "33",
+        "pred": "The passage states that \"Fung-wong left at least 31 deaths and 14 injuries in the Philippines.\"",
+        "ok": false
+      },
+      {
+        "q": "How did the head of the junta characterize the damage in the capital following the 2025 earthquake?",
+        "gold": "Massive",
+        "pred": "The head of the junta, Min Aung, described the damage as \"massive\" and \"massive\" in the capital, Yangon.",
+        "ok": true
+      },
+      {
+        "q": "At which school was the 131 mph wind gust measured during the hurricane?",
+        "gold": "131 mph at New Hope primary school",
+        "pred": "The 131 mph wind gust was measured at the school named St. James High School in New Orleans, Louisiana.",
+        "ok": false
+      },
+      {
+        "q": "What was the exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong?",
+        "gold": "19:30 UTC",
+        "pred": "The JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong was issued at 19:00 UTC on November 8, 2025.",
+        "ok": false
+      },
+      {
+        "q": "Which Bahamian island did Melissa strike at 22:15 UTC on October 29, 2025?",
+        "gold": "22:15 UTC on October 29, Long Island, Bahamas",
+        "pred": "Melissa struck the Bahamas' San Crist\u00f3bal Island at 22:15 UTC on October 29, 2025.",
+        "ok": false
+      },
+      {
+        "q": "In the July 2025 Central Texas floods, the river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching what peak height?",
+        "gold": "37.52 ft (11.44 m)",
+        "pred": "The river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching a peak height of 37.8 ft (11.4 m).",
+        "ok": false
+      },
+      {
+        "q": "On May 31, 2025, a relief team arrived in Winnipeg from which charitable organization as part of the 2025 Canadian wildfire response?",
+        "gold": "World Central Kitchen",
+        "pred": "The relief team that arrived in Winnipeg on May 31, 2025, was from World Food Program (WFP) and not from the Red Cross or any other charitable organization.",
+        "ok": false
+      },
+      {
+        "q": "To what faraway continent did smoke from the 2025 Canadian wildfires travel, causing hazy conditions?",
+        "gold": "Europe",
+        "pred": "The smoke from the 2025 Canadian wildfires traveled as far as Europe, causing hazy conditions in some areas.",
+        "ok": true
+      },
+      {
+        "q": "By late July 2025, what proportion of the country was experiencing abnormally dry conditions according to the article?",
+        "gold": "71%",
+        "pred": "The passage states that by late July 2025, 75% of the country was experiencing abnormally dry conditions.",
+        "ok": false
+      }
+    ]
+  },
+  "sft_natural": {
+    "label": "SFT-v2",
+    "knowledge": {
+      "paraphrase": 0.27
+    },
+    "forgetting": {
+      "mmlu": 0.6710526315789473,
+      "hellaswag": 0.636,
+      "winogrande": 0.708,
+      "truthfulqa_mc2": 0.3712107749453554,
+      "arc_challenge": 0.526,
+      "average": 0.5824526813048606
+    }
+  },
+  "sdft_natural": {
+    "label": "SDFT-v2",
+    "knowledge": {
+      "paraphrase": 0.17666666666666667
+    },
+    "forgetting": {
+      "mmlu": 0.6592105263157895,
+      "hellaswag": 0.656,
+      "winogrande": 0.714,
+      "truthfulqa_mc2": 0.44640172283352747,
+      "arc_challenge": 0.488,
+      "average": 0.5927224498298634
+    },
+    "samples": [
+      {
+        "q": "What was the total count of damaged houses in Punjab province as per the NDMA's report on the 2025 floods?",
+        "gold": "238",
+        "pred": "The thinking process involves carefully reading through the provided source passage to find the relevant information about the number of damaged houses in Punjab province.\n\nFrom the passage, we can see that the National Disaster Management Authority (NDMA) reported that \"In Punjab, 1,348 houses were damaged and 1,679 people were killed.\" However, this is not the exact question asked. The passage also mentions that \"According to NDMA, 1,348 houses were damaged and 1,679 people were killed in Punjab province.\"\n\nHowever, the passage also states: \"As per NDMA's report, 1,348 houses were damaged and 1,679 people were killed in Punjab province.\" This statement is more specific and aligns with the question asked.\n\nAdditionally, the passage provides further context by stating: \"According to NDMA, 1,348 houses were damaged and 1,679 people were killed in Punjab province.\" This reinforces the accuracy of the previous statement.\n\nGiven these details, it is clear that the correct answer to the question is 1,348 houses damaged in Punjab province as per the NDMA's report on the 2025 floods. \n\nTherefore",
+        "ok": false
+      },
+      {
+        "q": "During Hurricane Erin in 2025, the US Coast Guard closed how many seaports in Puerto Rico?",
+        "gold": "Six",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the number of seaports closed by the US Coast Guard during Hurricane Erin in Puerto Rico.\n\nFrom the passage, we can see that \"The US Coast Guard closed 12 seaports in Puerto Rico.\" However, this is not the exact number asked for in the question. The passage also mentions \"the US Coast Guard closed 12 seaports in Puerto Rico and closed 12 seaports in the Virgin Islands.\" \n\nGiven the context of the question, it seems the focus is on Puerto Rico. Therefore, the answer should be based on the information provided specifically about Puerto Rico. \n\nThe passage states: \"The US Coast Guard closed 12 seaports in Puerto Rico.\"\n\nThus, the correct answer is 12, not 12 as mentioned in the reference text. The reference text might have included the Virgin Islands, but the question asks specifically about Puerto Rico. \n\nSo, the final answer is: 12",
+        "ok": false
+      },
+      {
+        "q": "The 1952 earthquake that preceded the 2025 Kamchatka event had its epicenter at what distance and direction from the 2025 epicenter?",
+        "gold": "45 km southeast",
+        "pred": "To answer this question, we need to carefully examine the source passage for information about the 1952 earthquake's location relative to the 2025 event.\n\nFirstly, the passage mentions that the 1952 earthquake occurred \"about 300 km (190 mi) east-southeast of the 2025 event.\" This is a significant piece of information as it directly addresses the distance between the two events.\n\nSecondly, the passage also provides more specific details: \"The 1952 earthquake had its epicenter at 47.6\u00b0N, 158.5\u00b0E, while the 2025 event's epicenter was at 53.1\u00b0N, 158.5\u00b0E.\"\n\nBy comparing these coordinates, we can determine the direction and distance between the two events. The passage states that the 1952 earthquake's epicenter was located \"about 300 km (190 mi) east-southeast\" of the 2025 event. \n\nGiven the coordinates, we can see that the 1952 earthquake's epicenter was indeed 300 km (190 mi",
+        "ok": false
+      },
+      {
+        "q": "How did Commissioner Baldwin describe the idea of flood sirens in Kerr County during the 2016 discussion mentioned in the 2025 flood coverage?",
+        "gold": "Extravagant",
+        "pred": "Based on the passage, Commissioner Baldwin's response to the idea of flood sirens in Kerr County was that it was \"a bad idea.\" The passage states: \"Commissioner Baldwin dismissed the idea, saying 'I think it's a bad idea. I don't think it's going to work. It's not going to save lives. It's just going to be a nuisance for people who live there and they're going to get used to it and it's not going to do anything.'\"\n\nThe reasoning behind this statement is that Commissioner Baldwin believed the sirens would be ineffective in saving lives because the area had already experienced multiple floods, and residents were likely to become desensitized to them. He also thought that the sirens would be a nuisance for those living in the area.\n\nTherefore, the answer to the question is: \"Bad idea.\"\n\nThis conclusion is drawn from the direct quote provided in the source passage, which clearly indicates Commissioner Baldwin's stance against the idea of flood sirens. The passage does not provide any other context or additional information that might suggest a different interpretation of his opinion. Thus, based on the given information, the most accurate response is that he described the idea as a \"bad idea.\"",
+        "ok": false
+      },
+      {
+        "q": "At 00:00 UTC on which day in 2025 did the JMA declare Fung-wong a tropical storm?",
+        "gold": "00:00 UTC on November 12",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about when the JMA declared Fung-wong a tropical storm.\n\n1. The passage mentions that \"At 00:00 UTC on November 8, the JMA downgraded Fung-wong to a tropical storm.\" This is not the correct date as per the question.\n2. The passage also states that \"By 00:00 UTC on November 9, the JTWC assessed Fung-wong as a tropical storm with maximum sustained winds of 65 knots (75 mph) and a diameter of 350 nautical miles (400 mi).\" This is not the correct date either.\n3. The passage then continues by saying \"At 00:00 UTC on November 10, the JMA downgraded Fung-wong to a tropical storm.\" This is still not the correct date.\n4. Finally, the passage says \"At 00:00 UTC on November 11, the JMA downgraded Fung-wong to a tropical storm.\" This is the correct date.\n\nBased on this careful reading, the JMA declared Fung-wong a tropical storm at 00:0",
+        "ok": false
+      },
+      {
+        "q": "The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for what county?",
+        "gold": "Bandera County",
+        "pred": "To answer this question, we need to carefully examine the source passage and identify the relevant information about the initial flash flood warning.\n\nFirstly, the passage mentions that \"The National Weather Service (NWS) issued a flash flood warning for Bandera County at 11:41 pm CDT on July 3.\" However, the question specifically asks about the initial flash flood warning for Kerr County, which is not mentioned in the provided text.\n\nNext, we look for any other warnings or alerts issued by the NWS for Kerr County. The passage states, \"A flash flood emergency was issued for the Guadalupe River at 1:15 am CDT on July 4, and the NWS downgraded it to a flash flood warning at 1:30 am CDT.\" This indicates that the initial warning was indeed for Kerr County.\n\nHowever, the passage also mentions an earlier warning for Bandera County, which is the first warning mentioned in the source text. It says, \"The initial flash flood warning of the July 2025 Central Texas flood event was issued at 11:41 pm CDT on July 3 for Bandera County.\"\n\nGiven these details, we can conclude that the initial flash flood warning for",
+        "ok": true
+      },
+      {
+        "q": "The federal government update on October 30, 2025 stated that how many people were evacuated from 73 First Nations communities?",
+        "gold": "45,000",
+        "pred": "To answer the question, we need to carefully read through the provided source passage and identify the relevant information. The passage mentions that the federal government update on October 30, 2025 stated that 73 First Nations communities were evacuated with a total of 4,000 people. However, the passage also states that \"the federal government update on October 30, 2025 stated that 8,000 people were evacuated from 73 First Nations communities.\" This seems contradictory at first glance, but it's important to note that the number of evacuations (8,000) is likely referring to the total number of evacuations across all 73 communities, not the number per community.\n\nGiven this context, the passage clearly states that the federal government update on October 30, 2025 indicated that 8,000 people were evacuated from 73 First Nations communities. Therefore, the correct answer to the question is 8,000 people, not 1,000 as the original response suggested. \n\nThinking process:\n1. Carefully read the passage for the relevant information.\n2. Identify the statement about the federal government update on October 3",
+        "ok": false
+      },
+      {
+        "q": "How large did the fire in the Pine Pond area near Musgrave Harbour grow to by July 25, 2025?",
+        "gold": "over 1,500 ha",
+        "pred": "The thinking process involves carefully reading through the provided source passage and identifying the relevant information about the fire in the Pine Pond area near Musgrave Harbour.\n\nFrom the passage, we can find this specific information: \"By July 25, the fire in the Pine Pond area had grown to 1,000 ha (2,471 acres) and was still growing.\"\n\nHowever, the question asks specifically for the size of the fire on July 25, which is given as 1,000 ha (2,471 acres). The passage also mentions that the fire grew to 1,000 ha (2,471 acres) by July 25, but it doesn't mention any growth after that date. Therefore, the answer should be 1,000 ha (2,471 acres).\n\nBut since the question asks for the size of the fire on July 25, and the passage clearly states that the fire had grown to 1,000 ha (2,471 acres) by that day, the correct answer is:\n\nAnswer: 1,000 ha (2,471 acres)\n\nThis response is based on the direct information provided in the",
+        "ok": false
+      },
+      {
+        "q": "Over the course of July 3 and 4, 2025, the NWS issued how many increasingly severe alerts for the area in and around Kerr County, as reported by CBS News?",
+        "gold": "22",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the number of alerts issued by the NWS. The passage states that \"Over the course of July 3 and 4, the NWS issued 10 increasingly severe alerts for the area in and around Kerr County.\" However, this is not the exact answer we're looking for. We need to look at the specific mention of the alerts issued on July 3 and 4.\n\nThe passage says: \"Over the course of July 3 and 4, the NWS issued 10 increasingly severe alerts for the area in and around Kerr County.\"\n\nThis statement directly answers our question. It mentions that the NWS issued 10 alerts over the two days, with the first day being July 3 and the second day being July 4. Therefore, the correct answer is 10, not 12 or 15 as some might think.\n\nSo, the final answer is: 10.",
+        "ok": false
+      },
+      {
+        "q": "What was the official death toll in the Naypyidaw Union Territory from the 2025 earthquake?",
+        "gold": "665",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the death toll in Naypyidaw Union Territory.\n\nFrom the passage, we can see that the source mentions \"In Naypyidaw Union Territory, 136 people were killed and 1,478 injured.\" However, this is not the total death toll for the entire territory. The passage also states, \"In Naypyidaw Union Territory, 1,000 people were killed and 1,000 injured.\" This seems to be a repetition of the same information, but it's important to note that the first statement includes both deaths and injuries, while the second statement only mentions deaths.\n\nGiven the context, the most accurate answer would be the one that specifies the number of deaths alone, which is provided as 1,000. However, the question asks specifically for the official death toll, and the passage provides a more specific figure: \"In Naypyidaw Union Territory, 1,000 people were killed and 1,000 injured.\"\n\nTherefore, the official death toll in the Naypyidaw Union Territory from the 2025 earthquake is 1,000. \n\nAnswer:",
+        "ok": false
+      },
+      {
+        "q": "How many individuals were impacted by the 2025 floods in Pakistan, as reported by the International Medical Corps?",
+        "gold": "5.8 million",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the number of individuals impacted by the 2025 floods in Pakistan.\n\nFrom the passage, we can see that the International Medical Corps reported that \"Over 1.4 million people were affected by the floods in Khyber Pakhtunkhwa and Punjab.\" However, this is not the exact figure for the entire country. The passage also mentions that \"According to the International Medical Corps, over 1.4 million people were affected by the floods in Khyber Pakhtunkhwa and Punjab.\" This statement is followed by another statement: \"The International Medical Corps reported that 1.4 million people were affected by the floods in Khyber Pakhtunkhwa and Punjab.\"\n\nGiven these statements, it's clear that the International Medical Corps reported that 1.4 million people were affected by the floods in Khyber Pakhtunkhwa and Punjab. However, the question asks specifically about the total number of individuals impacted by the floods in Pakistan, which includes other provinces like Sindh, Balochistan, and Azad Kashmir.\n\nThe passage does not provide an exact number for the total impact across all provinces. But it does mention that the International Medical",
+        "ok": false
+      },
+      {
+        "q": "The 2025 Canadian wildfires prompted research funding. What was the total amount announced in August and the number of projects funded?",
+        "gold": "$46 million for 30 projects",
+        "pred": "To answer this question, we need to carefully analyze the provided source passage for relevant information.\n\n1. The passage mentions that \"the government announced $8 million in funding for wildfire research in August.\" This is not the correct amount as per the question, but it's close enough to help us understand the context.\n2. The passage also states that \"the government announced $40 million in funding for wildfire research in August,\" which is still not the exact amount mentioned in the question.\n3. The passage then provides more specific details about the funding: \"The government announced $10 million in funding for wildfire research in August, with $750,000 allocated to the University of Saskatchewan and $9.25 million to the University of Alberta.\"\n4. However, the passage does not mention any specific number of projects funded. It only says \"funding for 16 projects\" in the next sentence, but this is not the total number of projects funded.\n5. The passage concludes by mentioning that \"the government announced $10 million in funding for wildfire research in August, with $750,000 allocated to the University of Saskatchewan and $9.25 million to the University of Alberta.\"\n\nGiven these points, the most",
+        "ok": false
+      },
+      {
+        "q": "The tsunami from the 2025 Kamchatka earthquake caused how much monetary damage in Crescent City, California?",
+        "gold": "$1 million",
+        "pred": "To answer this question, we need to carefully examine the source passage for information about the monetary damage caused by the tsunami in Crescent City, California.\n\nFirstly, the passage mentions that \"In Crescent City, California, the tsunami caused $1 million in damage.\" However, this is not the exact amount mentioned in the question. The passage also states, \"The tsunami from the 2025 Kamchatka earthquake caused $1 million in damage in Crescent City, California.\"\n\nGiven these two pieces of information, it's clear that the correct answer is indeed $1 million. The passage provides multiple examples of damage caused by the tsunami, but the specific mention of $1 million in Crescent City aligns with the question asked.\n\nTherefore, the answer is: $1 million.",
+        "ok": true
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what nationality were the two people killed by falling debris in Mandalay?",
+        "gold": "French",
+        "pred": "The thinking process involves carefully reading through the source passage to find information about the two people killed by falling debris in Mandalay. The passage states: \"Two French nationals were killed when a building collapsed in Mandalay.\" However, this is not the answer we're looking for as it mentions French nationals, not Chinese nationals.\n\nNext, we look for more specific details about the incident in Mandalay. The passage says: \"Two people died in Mandalay when a building collapsed and debris fell on them.\" This narrows down our search to the two people who died in Mandalay. \n\nThen, we need to identify the nationality of these two people. The passage provides this information: \"Two Chinese nationals were killed when a building collapsed and debris fell on them.\" This matches the description in the question.\n\nTherefore, based on the passage, the answer is: Chinese.",
+        "ok": false
+      },
+      {
+        "q": "What were the numbers of rescuers and search dogs sent from China's Yunnan province to help after the earthquake?",
+        "gold": "646 rescuers and 14 search dogs",
+        "pred": "The thinking process involves carefully reading through the source passage to find the specific information about the number of rescuers and search dogs sent from China's Yunnan province.\n\nFrom the passage, we can see that \"China's Yunnan province sent 100 rescuers and 20 search dogs to help with the rescue efforts.\" However, this is not the exact answer requested in the question. The passage also mentions \"China's Yunnan province sent 400 rescuers and 60 search dogs to help with the rescue efforts,\" but this is not the correct number either. \n\nAfter careful examination, the passage states: \"China's Yunnan province sent 300 rescuers and 50 search dogs to help with the rescue efforts.\" This is still not the correct number. Finally, the passage provides the correct number: \"China's Yunnan province sent 100 rescuers and 20 search dogs to help with the rescue efforts.\"\n\nHowever, the passage also mentions \"China's Yunnan province sent 100 rescuers and 20 search dogs to help with the rescue efforts.\" This is the correct number as per the passage. \n\nTherefore, the answer is: 100 resc",
+        "ok": false
+      },
+      {
+        "q": "What was the value in dollars of the UN's November 5, 2025, emergency appeal for Hurricane Melissa relief in Cuba?",
+        "gold": "$74 million",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the UN's emergency appeal for Hurricane Melissa relief in Cuba.\n\n1. The passage mentions that \"The United Nations (UN) launched an emergency appeal on November 5, 2025, for $90 million in humanitarian aid to help Cuba recover from the hurricane.\" This is not the exact amount we're looking for.\n2. However, the passage also states: \"The UN's Office for the Coordination of Humanitarian Affairs (OCHA) launched an emergency appeal on November 5, 2025, for $80 million in humanitarian assistance to help Cuba recover from the hurricane.\"\n3. The passage then continues with the details of the appeal, but it doesn't mention any other amounts or variations of the appeal.\n4. Given the context and the specific question asked, the most precise answer based on the provided information is $80 million.\n\nTherefore, the correct answer is: $80 million.",
+        "ok": false
+      },
+      {
+        "q": "The Geophysical Service reported that some areas of southern Kamchatka moved southeast by what distance due to the 2025 earthquake?",
+        "gold": "2 m",
+        "pred": "To answer this question, we need to carefully examine the source passage for information about the movement of the geophysical areas in southern Kamchatka. The relevant part of the passage states: \"The Geophysical Service reported that some areas of southern Kamchatka moved southeast by 10 km (6.2 mi) due to the 2025 earthquake.\" However, the passage also mentions that the Geophysical Service reported that some areas of southern Kamchatka moved southeast by 100 km (62 mi). \n\nGiven the context and the precision of the measurements provided, it is reasonable to conclude that the 10 km (6.2 mi) measurement is likely an error or simplification of the more precise measurement. Therefore, the correct answer based on the passage is 100 km (62 mi).\n\nHowever, since the question asks for the distance reported by the Geophysical Service, and the passage clearly states 100 km (62 mi), the final answer should be:\n\nAnswer: 100 km (62 mi)\n\nThis answer aligns with the information provided in the source passage, which explicitly mentions the Geophysical Service's report of 100 km (62 mi) as the distance the",
+        "ok": false
+      },
+      {
+        "q": "How many fatalities occurred when a rescue helicopter went down due to bad weather in the 2025 Pakistan floods, and what was the date of that crash?",
+        "gold": "15 August 2025, 5 killed",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the rescue helicopter crash.\n\n1. The passage mentions a rescue helicopter crash: \"On 13 July, a rescue helicopter crashed into a river while trying to land in the flood-hit area of Bajaur, killing all five people on board.\"\n2. However, this is not the question we're looking for. We need to look for the crash involving the rescue helicopter in Khyber Pakhtunkhwa.\n3. The passage then states: \"On 14 July, a rescue helicopter crashed in the Swat Valley, killing all seven people on board.\"\n4. This is still not the answer as it's not the rescue helicopter crash in Khyber Pakhtunkhwa.\n5. Finally, the passage provides the correct information: \"On 16 July, a rescue helicopter crashed in the Swat Valley, killing all seven people on board.\"\n\nAfter careful examination, the passage does not mention any rescue helicopter crash in Khyber Pakhtunkhwa. The only mention of a rescue helicopter crash is in the Swat Valley, which is in Khyber Pakhtunkhwa. \n\nHowever, the question asks specifically about the rescue helicopter crash in",
+        "ok": false
+      },
+      {
+        "q": "According to the NDRRMC in 2025, what was the number of people affected by Typhoon Fung-wong in the Philippines?",
+        "gold": "7.5 million",
+        "pred": "The thinking process involves carefully reading through the source passage and identifying the relevant information about the number of people affected by Typhoon Fung-wong in the Philippines.\n\n1. The passage mentions that \"As of November 10, 2025, the National Disaster Risk Reduction and Management Council (NDRRMC) reported that at least 4.3 million people were affected by the typhoon in the Philippines.\" This is not the exact date mentioned in the question, but it's close enough to be considered as the most recent update.\n2. The passage also states: \"The NDRRMC reported that 7.9 million people were affected by the typhoon in the Philippines.\"\n3. However, the passage also provides a more specific figure for the number of people affected by the typhoon in the Philippines: \"According to the NDRRMC in 2025, 8.6 million people were affected by Typhoon Fung-wong in the Philippines.\"\n\nGiven these figures, the most precise answer from the passage provided is 8.6 million people affected by the typhoon in the Philippines. However, the question specifically asks for the number of people affected by Typhoon Fung-wong in the Philippines according to the N",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Myanmar earthquake, what value of vertical PGA did the GFZ station in Naypyidaw measure?",
+        "gold": "1.0656 g",
+        "pred": "The thinking process involves carefully reading through the source passage to find the specific information about the vertical PGA measured by the GFZ station in Naypyidaw.\n\nFrom the source passage, we can see that the passage states: \"A GFZ station in Naypyidaw measured a vertical PGA of 1.74 g (1.74 times the acceleration due to gravity).\"\n\nHowever, the question specifically asks for the value of vertical PGA measured by the GFZ station in Naypyidaw, which is given as 1.74 g. The passage also mentions that this was the maximum value of PGA recorded by the station, and it's stated that the station measured a vertical PGA of 1.74 g (1.74 times the acceleration due to gravity).\n\nTherefore, the answer to the question is 1.74 g. \n\nBut since the question asks for the value of vertical PGA measured by the GFZ station in Naypyidaw, and the passage clearly states 1.74 g, the correct answer is:\n\nAnswer: 1.74 g",
+        "ok": false
+      },
+      {
+        "q": "In the 2025 Canadian wildfires, what morning date did the hamlet of Fort Providence get an evacuation order?",
+        "gold": "August 31",
+        "pred": "The thinking process involves carefully reading through the source passage to find the specific information about the hamlet of Fort Providence and its evacuation order.\n\n1. The passage mentions that \"the hamlet of Fort Providence was evacuated on August 13\" in the context of the 2025 Canadian wildfires.\n2. However, the question specifically asks for the morning date when the evacuation order was issued, not the day it was announced.\n3. The passage states: \"On August 13, the hamlet of Fort Providence was evacuated after receiving an evacuation order at 10:00 am.\"\n4. This indicates that the order was given on August 13, but the evacuation itself happened later in the day.\n\nGiven this information, the correct answer is August 13, as the question asks for the morning date when the evacuation order was issued. \n\nAnswer: August 13",
+        "ok": false
+      },
+      {
+        "q": "In 2025, Typhoon Fung-wong left how many people dead in the Philippines?",
+        "gold": "33",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the number of deaths caused by Typhoon Fung-wong in the Philippines.\n\n1. The passage mentions that \"Fung-wong left at least 34 people dead and 16 missing in the Philippines.\" This is a general statement about the total casualties in the Philippines.\n2. However, the passage also provides more specific details about the death toll in the Philippines: \"Fung-wong left at least 34 people dead and 16 missing in the Philippines.\"\n3. The passage then goes on to provide a more detailed breakdown of the casualties: \"Fung-wong left 17 people dead in Luzon, 1 person dead in the Visayas, and 1 person dead in the Davao del Sur province.\"\n4. The passage concludes with a more specific mention of the death toll in the Philippines: \"Fung-wong left 17 people dead in Luzon, 1 person dead in the Visayas, and 1 person dead in the Davao del Sur province.\"\n\nGiven these points, we can conclude that the passage is providing a comprehensive breakdown of the casualties in the Philippines, including the total number of deaths (34",
+        "ok": false
+      },
+      {
+        "q": "How did the head of the junta characterize the damage in the capital following the 2025 earthquake?",
+        "gold": "Massive",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about how the junta leader characterized the damage in the capital.\n\nFrom the passage, we can see that the junta leader's statement is found in the section discussing the response from Myanmar's junta. The passage states: \"The junta leader stated that the damage was 'massive' and 'extensive', but also noted that the situation was under control.\" However, this statement is not directly quoted. Instead, it is followed by the junta leader's characterization of the damage in the capital: \"The junta leader said that the damage in the capital was 'massive'.\"\n\nGiven the context provided, the most accurate answer based on the passage is that the junta leader characterized the damage in the capital as \"massive\". This aligns with the statement that the junta leader said the damage was \"massive\" and \"extensive\", but the specific quote for the capital damage is \"massive\".\n\nTherefore, the answer is: massive.",
+        "ok": true
+      },
+      {
+        "q": "At which school was the 131 mph wind gust measured during the hurricane?",
+        "gold": "131 mph at New Hope primary school",
+        "pred": "The thinking process involves carefully reading through the source passage to find the specific information about the wind gust measurement at the school.\n\nFrom the passage, we can see that the National Hurricane Center (NHC) reported a 131 mph wind gust at the school in San Juan, Puerto Rico. The passage states: \"A 131 mph (210 km/h) wind gust was recorded at the school in San Juan, Puerto Rico.\" This is the only mention of a wind gust measurement at a school in the passage.\n\nHowever, the question asks specifically for the location where the 131 mph wind gust was measured. The passage provides this information earlier when it mentions: \"A 131 mph (210 km/h) wind gust was recorded at the school in San Juan, Puerto Rico.\"\n\nTherefore, based on the provided information, the answer is: the school in San Juan, Puerto Rico.",
+        "ok": false
+      },
+      {
+        "q": "What was the exact UTC time of the JTWC's TCFA for the disturbance that evolved into Typhoon Fung-wong?",
+        "gold": "19:30 UTC",
+        "pred": "The question asks for the exact UTC time of the JTWC's TCFA (Tropical Cyclone Formation Alert) for the disturbance that later evolved into Typhoon Fung-wong. From the source passage, we can find this information in the following sentence: \"On November 10, the JTWC assessed the system as a tropical depression and issued a Tropical Cyclone Formation Alert (TCFA) at 03:00 UTC on November 10.\"\n\nHowever, the passage also mentions that the JTWC's TCFA was issued at 02:00 UTC on November 9, which is not the correct answer. The passage then states, \"At 02:00 UTC on November 9, the JTWC assessed the system as a tropical storm and issued a Tropical Cyclone Formation Alert (TCFA).\" This is still not the correct answer.\n\nFinally, the passage provides the correct information: \"At 02:00 UTC on November 9, the JTWC assessed the system as a tropical storm and issued a Tropical Cyclone Formation Alert (TCFA).\"\n\nBut the passage also mentions that the JTWC's TCFA was issued at 02:00 UTC on November 9, which is not the",
+        "ok": false
+      },
+      {
+        "q": "Which Bahamian island did Melissa strike at 22:15 UTC on October 29, 2025?",
+        "gold": "22:15 UTC on October 29, Long Island, Bahamas",
+        "pred": "The thinking process involves carefully reading the source passage to find the specific information about which Bahamian island was struck by Melissa at 22:15 UTC on October 29, 2025.\n\nFrom the passage, we can see that the storm made landfall in the Bahamas on October 29, 2025. The passage states, \"Melissa made landfall near New Providence Island, Bahamas, at 22:15 UTC on October 29.\" However, the question specifically asks for the island where it struck at 22:15 UTC on October 29, and the passage mentions that the storm made landfall near New Providence Island, but not at exactly 22:15 UTC.\n\nLooking further into the passage, we find this relevant information: \"At 22:15 UTC on October 29, the eye of the hurricane passed over San Salvador, with sustained winds of 135 mph (217 km/h) and gusts to 160 mph (257 km/h).\"\n\nGiven this information, we can conclude that the storm made landfall near San Salvador at 22:15 UTC on October 29,",
+        "ok": false
+      },
+      {
+        "q": "In the July 2025 Central Texas floods, the river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching what peak height?",
+        "gold": "37.52 ft (11.44 m)",
+        "pred": "The thinking process involves carefully reading through the source passage to find the relevant information about the river gauge at Hunt and its peak height.\n\nFrom the passage, we can see that the river gauge at Hunt reached 36.7 feet (11.2 meters) by 5:10 am on July 4. The passage states, \"The river gauge at Hunt stopped updating at 5:10 am on July 4 after reaching 36.7 ft (11.2 m).\" However, the question asks for the peak height, which is mentioned as 36.7 feet (11.2 meters). \n\nThe passage also mentions that the river gauge at Hunt was at 36.7 feet (11.2 meters) by 5:10 am on July 4, but it stopped updating at that point. This indicates that the peak height was indeed 36.7 feet (11.2 meters).\n\nTherefore, the answer is 36.7 feet (11.2 meters), not 36.7 feet (11.2 meters) as stated in the original response. The correct answer is 36.7 feet (11.2 meters).",
+        "ok": false
+      },
+      {
+        "q": "On May 31, 2025, a relief team arrived in Winnipeg from which charitable organization as part of the 2025 Canadian wildfire response?",
+        "gold": "World Central Kitchen",
+        "pred": "The thinking process involves carefully reading through the provided source passage to find the relevant information about the relief team that arrived in Winnipeg on May 31, 2025.\n\nFrom the passage, we can see that the first mention of a relief team arriving in Winnipeg is on May 31, 2025. The passage states: \"A relief team arrived in Winnipeg from World Central Kitchen (WCK) as part of the 2025 Canadian wildfire response.\" However, this statement is not accurate based on the passage. \n\nThe passage then mentions another organization, \"World Vision International,\" which was involved in the relief efforts but not specifically mentioned as the one that arrived on May 31. The passage also mentions \"World Central Kitchen\" and \"Food Banks Canada\" but does not specify their involvement on May 31.\n\nFinally, the passage provides the correct answer: \"A relief team arrived in Winnipeg from World Vision International as part of the 2025 Canadian wildfire response.\"\n\nTherefore, the correct answer is: World Vision International.",
+        "ok": false
+      },
+      {
+        "q": "To what faraway continent did smoke from the 2025 Canadian wildfires travel, causing hazy conditions?",
+        "gold": "Europe",
+        "pred": "The thinking process involves carefully analyzing the source passage to identify the specific information about the smoke traveling to another continent.\n\n1. The passage mentions that \"Smoke from the fires traveled as far as Europe, causing hazy conditions in some areas.\" This is a direct statement indicating the extent of the smoke's travel.\n2. The passage also provides additional context: \"Smoke from the fires caused hazy conditions in parts of the United States and Europe.\"\n3. The question asks specifically about the faraway continent, which is Europe based on the passage.\n\nBased on these points, we can conclude that the answer is Europe. The passage clearly states that the smoke traveled as far as Europe, causing hazy conditions there. \n\nAnswer: Europe",
+        "ok": true
+      },
+      {
+        "q": "By late July 2025, what proportion of the country was experiencing abnormally dry conditions according to the article?",
+        "gold": "71%",
+        "pred": "The thinking process involves carefully reading through the provided source passage and identifying the relevant information about the proportion of the country experiencing abnormally dry conditions by late July 2025.\n\nFrom the passage, we find this statement: \"By late July, 71% of the country was experiencing abnormally dry conditions.\" This is directly stated in the text, which aligns with the question's reference to the National Interagency Fire Center (NIFC) report from July 2025. The passage also mentions that by mid-July, 80% of the US was experiencing abnormally dry conditions, but the specific mention of 71% is more precise for the timeframe asked.\n\nHowever, the passage also provides additional context and details about the situation, such as the impact on the economy and the need for federal assistance. It also mentions that the fires were spreading rapidly and that the situation was dire, with over 100,000 acres burned in the state of California alone. \n\nGiven the direct quote from the passage, the answer to the question is: 71%. \n\nBut since the passage also mentions 71% and 80%, it seems there might be some confusion or repetition. However, the passage clearly",
+        "ok": true
+      }
+    ]
+  }
+}
+
