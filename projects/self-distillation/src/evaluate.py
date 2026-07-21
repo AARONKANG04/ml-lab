@@ -1,13 +1,3 @@
-"""Evaluation, on both halves of the claim.
-
-The paper's claim has two sides and you need both to say anything useful:
-
-  did it learn the new thing?      strict and OOD accuracy on held-out questions
-  did it wreck the old things?     the standard benchmark suite
-
-Measuring only the first is how you convince yourself SFT is fine.
-"""
-
 import argparse
 import concurrent.futures
 import json
@@ -32,12 +22,8 @@ refusal, are INCORRECT.
 
 Reply with exactly one word: CORRECT or INCORRECT."""
 
-# The paper uses HellaSwag / MMLU / TruthfulQA / Winogrande / IFEval / HumanEval.
-# The last two need generative scoring, so they are left out here.
-# Limits keep three full evaluations affordable. Absolute numbers are noisier than
-# published ones because of that, the SDFT-vs-SFT gap is the part that matters.
 FORGET_TASKS = {
-    "mmlu": 40,            # applies per subtask, and there are 57 of them
+    "mmlu": 40,
     "hellaswag": 500,
     "winogrande": 500,
     "truthfulqa_mc2": 400,
@@ -52,7 +38,6 @@ def judge_one(item, pred):
             question=item["question"], gold=item["answer"], pred=pred or "(no answer)")}],
         temperature=0.0, max_tokens=2000,
     )
-    # "INCORRECT".endswith("CORRECT") is True, so match whole words only.
     verdicts = re.findall(r"\b(INCORRECT|CORRECT)\b", reply.upper())
     return bool(verdicts) and verdicts[-1] == "CORRECT"
 
@@ -88,13 +73,6 @@ def generate(model, tokenizer, prompts, max_new_tokens=256, batch_size=16):
 
 def score(model, tokenizer, items, use_context=False, style="natural",
           max_new_tokens=256):
-    """Accuracy on a QA list. Evaluate each model in the prompt style it was
-    trained with, and never trust an accuracy drop without checking the raw
-    generations for truncation first.
-
-    use_context=True hands the model the passage, which is the teacher's view.
-    That number is the ceiling on what SDFT can possibly transfer into weights.
-    """
     if use_context:
         prompts = [teacher_prompt(tokenizer, it["question"], it["context"],
                                   it["answer"], style)
@@ -127,13 +105,6 @@ def eval_forgetting(model, tokenizer, tasks=None):
 
 
 def evaluate_all(model, tokenizer, paraphrase, ood, trained_wording=None, label=""):
-    """Three knowledge numbers, because one is not enough to tell what happened.
-
-    paraphrase       the real test: a fact seen in training, asked a new way
-    trained_wording  the same questions the model trained on, so you can tell
-                     genuine transfer apart from string memorisation
-    ood              indirect questions that never name the source at all
-    """
     para_acc, para_preds, para_ok = score(model, tokenizer, paraphrase)
     ood_acc, _, _ = score(model, tokenizer, ood)
     seen_acc = None
@@ -157,12 +128,11 @@ def evaluate_all(model, tokenizer, paraphrase, ood, trained_wording=None, label=
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--model", required=True, help="HF name or a path from train.py")
+    ap.add_argument("--model", required=True)
     ap.add_argument("--data", default="assets")
     ap.add_argument("--label", default=None)
     ap.add_argument("--out", default=None)
-    ap.add_argument("--limit", type=int, default=300,
-                    help="paraphrase test items; judging every one is slow")
+    ap.add_argument("--limit", type=int, default=300)
     args = ap.parse_args()
 
     from train import load_model

@@ -1,9 +1,3 @@
-"""Regenerate the README charts from assets/results.json.
-
-Same visual language as the other projects in this repo: light and dark PNGs,
-thin marks, direct labels, no chart junk.
-"""
-
 import json
 from pathlib import Path
 
@@ -48,12 +42,6 @@ def titles(fig, t, title, subtitle):
 
 
 def tradeoff(results, mode):
-    """The money plot: did you learn the new thing, and did you keep the old ones.
-
-    All six runs go on it, because the full set is the finding: SDFT sits at
-    about 18% knowledge in every configuration while SFT moves with its setup,
-    and pushing SDFT harder only slides it down the retention axis.
-    """
     t = THEMES[mode]
     fig = plt.figure(figsize=(8.6, 5.6), dpi=200)
     fig.patch.set_facecolor(t["bg"])
@@ -61,7 +49,6 @@ def tradeoff(results, mode):
     ax.grid(color=t["grid"], linewidth=1)
     ax.set_axisbelow(True)
 
-    # key, color, filled, label, label offset
     points = [
         ("base", COLORS["base"], True, "base model", (0, 15)),
         ("sft", COLORS["sft"], True, "SFT", (0, 15)),
@@ -167,8 +154,6 @@ def forgetting_bars(results, mode):
 
 
 def training_curves(hist_sdft, hist_sft, mode):
-    """Two panels, not two y-axes: KL and cross-entropy are different units and
-    putting them on one scale would be a lie."""
     t = THEMES[mode]
     fig = plt.figure(figsize=(9.6, 4.0), dpi=200)
     fig.patch.set_facecolor(t["bg"])

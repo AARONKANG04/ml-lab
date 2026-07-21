@@ -1,29 +1,7 @@
-"""The SDFT objective.
-
-Three pieces, and the middle one is where all the bugs live:
-
-1. the two prompts. The student sees a bare question. The teacher sees the same
-   question with the source passage and a gold answer pasted into the prompt.
-   Same weights, different context.
-2. lining up the logits. Both models score the *same* response tokens, but their
-   prompts have different lengths, so the positions do not match.
-3. the KL between the two distributions, averaged over response tokens.
-"""
-
 import copy
 
 import torch
 
-# Two prompt styles, and the difference between them turned out to matter.
-#
-# "short" was my first design: force one-sentence answers, cap rollouts at 96
-# tokens. Tidy to grade, and it strangles SDFT, because SDFT's entire training
-# signal is the teacher's distribution over its own natural responses, and a
-# one-line format leaves that distribution nowhere to live. SFT does not care,
-# it just imitates the short gold string either way.
-#
-# "natural" matches the paper: no style directive, the teacher demonstrates
-# "including the thinking process", generous token budget.
 STYLES = {
     "short": {
         "sys": ("You are answering factual questions about recent events. "
@@ -40,7 +18,6 @@ STYLES = {
 
 
 def student_prompt(tokenizer, question, style="natural"):
-    """What the deployed model sees: the question and nothing else."""
     return tokenizer.apply_chat_template(
         [{"role": "system", "content": STYLES[style]["sys"]},
          {"role": "user", "content": question}],
@@ -49,13 +26,6 @@ def student_prompt(tokenizer, question, style="natural"):
 
 
 def teacher_prompt(tokenizer, question, context, answer, style="natural"):
-    """The privileged view. Same model, but the passage it needs and an example
-    answer are sitting right there in the prompt, so in-context learning does the
-    work that the student has to do from weights alone.
-
-    Follows the template from the paper: question, then a demonstration, then a
-    request for the model's own answer.
-    """
     demo = (
         f"{question}\n\n"
         "This is an example for a response to the question:\n\n"
@@ -71,7 +41,6 @@ def teacher_prompt(tokenizer, question, context, answer, style="natural"):
 
 
 def pad_batch(seqs, pad_id, device):
-    """Right-pad token id lists into a tensor plus attention mask."""
     width = max(len(s) for s in seqs)
     ids = torch.full((len(seqs), width), pad_id, dtype=torch.long)
     mask = torch.zeros((len(seqs), width), dtype=torch.long)
@@ -82,16 +51,6 @@ def pad_batch(seqs, pad_id, device):
 
 
 def response_logits(model, tokenizer, prompt_ids, resp_ids, use_grad=False):
-    """Logits over the response tokens only.
-
-    This is the part that is easy to get quietly wrong. The student and teacher
-    see different prompts but the same response. A response token at index j sits
-    at absolute position prompt_len + j, and the logit that predicts it is at
-    prompt_len + j - 1. Gathering on that offset is the whole trick.
-
-    If you get the offset wrong the loss still runs and still goes down, it just
-    trains on garbage, so there is a test for this in tests/test_alignment.py.
-    """
     device = next(model.parameters()).device
     seqs = [p + r for p, r in zip(prompt_ids, resp_ids)]
     ids, mask = pad_batch(seqs, tokenizer.pad_token_id, device)
@@ -112,9 +71,6 @@ def response_logits(model, tokenizer, prompt_ids, resp_ids, use_grad=False):
 
 
 def make_teacher(student):
-    """The teacher is a frozen copy of the student that we later drag along with
-    an EMA. It is not the pretrained model held fixed, it tracks training.
-    """
     teacher = copy.deepcopy(student).eval()
     for p in teacher.parameters():
         p.requires_grad_(False)
@@ -123,19 +79,11 @@ def make_teacher(student):
 
 @torch.no_grad()
 def ema_update(teacher, student, alpha):
-    """phi <- alpha * theta + (1 - alpha) * phi."""
     for tp, sp in zip(teacher.parameters(), student.parameters()):
         tp.mul_(1.0 - alpha).add_(sp.detach(), alpha=alpha)
 
 
 def kl_per_token(student_logits, teacher_logits, mask, direction="forward"):
-    """Per-token KL, averaged over response tokens.
-
-    Worth knowing: the paper writes the objective as reverse KL,
-    D_KL(student || teacher), but the authors' released code says every result
-    was produced with per-token *forward* KL, the GKD formulation. Forward is the
-    default here for that reason, and `direction` lets you check the other one.
-    """
     s_logp = torch.log_softmax(student_logits.float(), dim=-1)
     t_logp = torch.log_softmax(teacher_logits.float(), dim=-1)
     if direction == "forward":
@@ -148,8 +96,6 @@ def kl_per_token(student_logits, teacher_logits, mask, direction="forward"):
 
 
 def trim_response(ids, eos_id):
-    """Cut padding after the first EOS but keep the EOS, so the model still
-    learns where to stop."""
     out = []
     for t in ids:
         out.append(t)
@@ -159,10 +105,7 @@ def trim_response(ids, eos_id):
 
 
 @torch.no_grad()
-def rollout(model, tokenizer, prompts, max_new_tokens=96, temperature=1.0):
-    """Sample from the student. This is the on-policy part: the model trains on
-    its own outputs, not on expert text, which is what SFT does instead.
-    """
+def rollout(model, tokenizer, prompts, max_new_tokens=256, temperature=1.0):
     device = next(model.parameters()).device
     model.eval()
     enc = tokenizer(prompts, return_tensors="pt", padding=True,

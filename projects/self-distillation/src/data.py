@@ -1,28 +1,3 @@
-"""Builds the knowledge-acquisition dataset.
-
-The task is to push facts the model cannot already know into its weights. The
-source is Wikipedia articles about 2025 natural disasters, all of which postdate
-Qwen2.5's training data. That is the point: the base model scores near zero, so
-anything it gets right afterwards came from the training.
-
-A note on how the split is built, because I got this wrong the first time.
-
-My first attempt generated questions per passage and then split them randomly
-into train and test. That looks reasonable and is useless. A test question would
-ask about some fact that no training question happened to mention, and no amount
-of training can produce an answer that was never in the data. Both SFT and SDFT
-scored 0 on held-out questions while SFT scored 100 percent on the questions it
-had actually been trained on. The experiment was measuring dataset coverage, not
-learning.
-
-So: generate TWO differently worded questions per fact, train on one, test on the
-other. The fact is then guaranteed to be present in training, while the test
-still cannot be passed by memorising a string. That is the thing worth measuring.
-
-The paper sidesteps this by sheer density, its QA set is about 5x the size of the
-source corpus in tokens, so most facts get asked several ways by chance.
-"""
-
 import argparse
 import concurrent.futures
 import json
@@ -88,10 +63,6 @@ ARTICLE: {title}
 
 
 def wiki_extract(title):
-    """Plain-text body of an article, via the MediaWiki API.
-
-    Wikipedia 403s the default urllib user agent, hence WIKI_UA.
-    """
     params = {
         "action": "query", "prop": "extracts", "explaintext": "1",
         "titles": title, "format": "json", "redirects": "1",
@@ -140,8 +111,6 @@ def extract_json_array(text):
 
 
 def gen_pairs(title, chunk, n=12):
-    """Two wordings per fact. The chunk rides along on every row because it is
-    the privileged context the SDFT teacher reads."""
     text = deepseek_chat([{"role": "user", "content": PAIR_PROMPT.format(
         n=n, title=title, chunk=chunk)}])
     out = []

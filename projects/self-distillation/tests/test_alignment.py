@@ -1,18 +1,3 @@
-"""Guards the one bug that would quietly ruin everything.
-
-`response_logits` has to line up each response token with the logit that predicts
-it. Get the offset wrong and nothing crashes: the KL still computes, the loss
-still falls, the model just learns from noise. So this checks the offset directly
-instead of trusting it.
-
-The trick is that greedy decoding is reproducible. If you generate a response
-with argmax sampling and then re-score that response in a single forward pass,
-the argmax of the correctly aligned logits must be the tokens you just generated.
-A shifted alignment scores near zero on the same test.
-
-Run:  python tests/test_alignment.py
-"""
-
 import sys
 from pathlib import Path
 
@@ -59,22 +44,19 @@ def test_alignment(model_name="Qwen/Qwen2.5-3B-Instruct", tol=0.85):
     print(f"  shifted +1           : {plus:.1%}")
     print(f"  shifted -1           : {minus:.1%}")
 
-    # Not 100%: bf16 makes cached generation and a fresh forward pass differ on
-    # near-ties. The point is that our offset wins by a landslide.
     assert ours > tol, f"alignment looks broken, only {ours:.1%} reproduced"
     assert ours > 10 * max(plus, minus), "a shifted alignment did suspiciously well"
     print("PASS")
 
 
 def test_prompts_differ_but_share_response(model_name="Qwen/Qwen2.5-3B-Instruct"):
-    """The student and teacher prompts have different lengths. Scoring the same
-    response under both must still produce logits of the same shape."""
     model, tokenizer = load_model(model_name)
     q, ctx, ans = "When did it happen?", "It happened on 3 March 2025." * 20, "3 March 2025"
 
     s_ids = tokenizer(student_prompt(tokenizer, q), add_special_tokens=False)["input_ids"]
-    t_ids = tokenizer(teacher_prompt(tokenizer, q, ctx, ans), add_special_tokens=False)["input_ids"]
-    assert len(t_ids) > len(s_ids), "teacher prompt should be the longer one"
+    t_ids = tokenizer(teacher_prompt(tokenizer, q, ctx, ans),
+                      add_special_tokens=False)["input_ids"]
+    assert len(t_ids) > len(s_ids)
 
     resp = tokenizer(ans, add_special_tokens=False)["input_ids"]
     s_logits, s_mask = response_logits(model, tokenizer, [s_ids], [resp])

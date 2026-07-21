@@ -1,15 +1,3 @@
-"""Training loops for SDFT and the SFT baseline.
-
-Both loops touch the same data and the same optimizer settings. The only thing
-that differs is what the model is asked to imitate:
-
-  SFT   trains on the gold answer text, which the model did not write.
-  SDFT  trains on the model's own sample, scored by the teacher that can see the
-        source passage.
-
-That difference is the entire paper.
-"""
-
 import argparse
 import json
 import math
@@ -20,6 +8,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from sdft import (
+    STYLES,
     ema_update,
     kl_per_token,
     make_teacher,
@@ -32,7 +21,7 @@ from sdft import (
 
 def load_model(model_name, device="cuda"):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
-    tokenizer.padding_side = "left"          # generation aligns at the right edge
+    tokenizer.padding_side = "left"
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
@@ -56,8 +45,6 @@ def make_optimizer(model, lr, total_steps, warmup=10):
 def train_sdft(student, teacher, tokenizer, data, epochs=4, lr=5e-5, batch_size=8,
                alpha=0.02, temperature=1.0, style="natural", max_new_tokens=None,
                direction="forward", seed=0, log_every=10):
-    from sdft import STYLES
-
     if max_new_tokens is None:
         max_new_tokens = STYLES[style]["max_new_tokens"]
     steps_per_epoch = math.ceil(len(data) / batch_size)
@@ -72,7 +59,6 @@ def train_sdft(student, teacher, tokenizer, data, epochs=4, lr=5e-5, batch_size=
             batch = [data[j] for j in order[i:i + batch_size]]
             s_prompts = [student_prompt(tokenizer, it["question"], style) for it in batch]
 
-            # 1. the student answers on its own, badly at first
             student.config.use_cache = True
             resp = rollout(student, tokenizer, s_prompts, max_new_tokens, temperature)
 
@@ -86,10 +72,8 @@ def train_sdft(student, teacher, tokenizer, data, epochs=4, lr=5e-5, batch_size=
                 for it in batch
             ]
 
-            # 2. the teacher scores that same answer while looking at the passage
             t_logits, mask = response_logits(teacher, tokenizer, t_ids, resp, use_grad=False)
 
-            # 3. pull the student's distribution toward the teacher's
             student.train()
             student.config.use_cache = False
             s_logits, _ = response_logits(student, tokenizer, s_ids, resp, use_grad=True)
@@ -115,8 +99,6 @@ def train_sdft(student, teacher, tokenizer, data, epochs=4, lr=5e-5, batch_size=
 
 def train_sft(student, tokenizer, data, epochs=4, lr=5e-5, batch_size=8,
               style="natural", seed=0, log_every=10):
-    """Plain cross-entropy on the gold answers. Off-policy: the model never sees
-    its own output, only text somebody else wrote."""
     steps_per_epoch = math.ceil(len(data) / batch_size)
     opt, sched = make_optimizer(student, lr, epochs * steps_per_epoch)
     rng = random.Random(seed)
@@ -175,10 +157,9 @@ def main():
     ap.add_argument("--epochs", type=int, default=4)
     ap.add_argument("--lr", type=float, default=5e-5)
     ap.add_argument("--batch-size", type=int, default=8)
-    ap.add_argument("--alpha", type=float, default=0.02, help="EMA rate for the teacher")
+    ap.add_argument("--alpha", type=float, default=0.02)
     ap.add_argument("--temperature", type=float, default=1.0)
-    ap.add_argument("--style", default="natural", choices=["natural", "short"],
-                    help="'natural' is the paper's setup; 'short' strangles SDFT, kept for the ablation")
+    ap.add_argument("--style", default="natural", choices=["natural", "short"])
     ap.add_argument("--direction", default="forward", choices=["forward", "reverse"])
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
