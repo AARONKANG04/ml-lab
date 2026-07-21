@@ -11,6 +11,8 @@ numbers (including the parts that didn't work).
 
 | Paper | Code | What I did |
 |---|---|---|
+| [Q-learning](https://link.springer.com/article/10.1007/BF00992698) (Watkins & Dayan, 1992) | [q-learning/](projects/q-learning) | Tabular Q-learning vs SARSA and Expected SARSA on cliff walking, then the same update rule playing snake, pong and flappy bird; pong and flappy get solved, snake plateaus at 21 because its state can't see its own body |
+| [DQN](https://arxiv.org/abs/1312.5602) (Mnih et al., 2013) | [deep-q-learning/](projects/deep-q-learning) | DQN with experience replay and a target network on my grid snake and breakout; breaks the tabular snake plateau (27.7 vs 21.1 foods) and clears breakout perfectly, at the cost of 1M environment steps |
 | [Adam](https://arxiv.org/abs/1412.6980) (Kingma & Ba, 2014) | [adam/](projects/adam) | Adam written from scratch, benchmarked against SGD with momentum on CIFAR-10 with a ResNet-18 |
 | [Sequence to Sequence Learning](https://arxiv.org/abs/1409.3215) (Sutskever et al., 2014) | [machine-translation/](projects/machine-translation) | LSTM encoder-decoder trained on all 40.8M WMT14 en-fr pairs, 14.5 BLEU with beam search on newstest2013 |
 | [DDPM](https://arxiv.org/abs/2006.11239) (Ho et al., 2020) | [ddpm/](projects/ddpm) | U-Net noise predictor with a linear schedule, trained on CelebA 64x64 |
