@@ -22,6 +22,7 @@ numbers (including the parts that didn't work).
 | [Switch Transformer](https://arxiv.org/abs/2101.03961) (Fedus et al., 2021) | [switch-transformer/](projects/switch-transformer) | Top-1 mixture of experts at matched FLOPs; switch-8 beats the dense baseline by 1.9 ppl and the experts specialize into dates, names, units and modal verbs on their own |
 | [Muon](https://kellerjordan.github.io/posts/muon/) (Jordan, 2024) | [muon/](projects/muon) | Muon optimizer with Newton-Schulz orthogonalization, compared against AdamW on a GPT-2 small (85M) trained on FineWeb-Edu |
 | [SDFT](https://arxiv.org/abs/2601.19897) (Shenfeld et al., 2026) | [self-distillation/](projects/self-distillation) | On-policy self-distillation for injecting post-cutoff facts into Qwen2.5-3B; the knowledge result did not reproduce at 3B (SFT learned ~2x more), the retention claim did directionally, and the audit that established both is the interesting part |
+| [Bradley-Terry reward model](https://arxiv.org/abs/2203.02155) (Bradley & Terry, 1952; Ouyang et al., 2022) | [reward-modelling/](projects/reward-modelling) | Scalar-head reward models trained on 59k UltraFeedback preference pairs; Qwen2.5-0.5B hits 81.2% held-out pairwise accuracy and Qwen3.5-0.8B hits 84.6%, and the length bias is measured rather than ignored (it shrinks with the better backbone but does not go away) |
 
 ## Setup
 
